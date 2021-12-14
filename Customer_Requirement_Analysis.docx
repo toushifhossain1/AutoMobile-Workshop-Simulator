@@ -1,31 +1,27 @@
-
-
-
-
 Users:
 U1) Customer (car owner)
-U2) Technician 
-U3) Supplier
+U2) Mechanic 
+U3) Engine Supplier
 U4) Store Manager 
 U5) Human Resource Manager
 
 Goals:
 U1) Customer (car owner)
-G1) Customer can see the workload of technician & make an appointment
-G2) Customer can communicate with technician & ask for solution of problem / recommendation of upgrade from Technician 
+G1) Customer can see the workload of Mechanic, get recommendation & make an appointment
+G2) Customer can communicate with Mechanic & ask for solution of problem / recommendation of upgrade from Mechanic 
 G3) Order for pick-up of vehicle (in case it is totally / partially immobilized)
 G4) Complain to Store Manager & Reply of feedback of the complain / E-mail from the HR
 G5) Download the invoice of any work whenever the customer wants
 
 
-U2) Technician 
+U2) Mechanic 
 G1) check for list of materials available in inventory & arrival date of new goods then report to Store Manager for any goods to order 
 G2) Communicate with the Customer & Refer the Customer for asked recommendation
 G3) Give attendance & record the start time of the work &record the end time of the work
 G4) Report of any emergency leave / Apply for any leave of absence
-G5) Status of Technician (if any warning received from the Store Manager or Asked to join Training by HR Dept. / Any leave of absence granted)
+G5) Status of Mechanic (if any warning received from the Store Manager or Asked to join Training by HR Dept. / Any leave of absence granted)
 
-U3) Supplier
+U3) Engine Supplier
 G1) Can see the ordered products and their delivery due time
 G2) Can see the inventory (List of materials available) of the company 
 G3) Mark as Delivered or Canceled any ordered product
@@ -35,7 +31,7 @@ G5) See previously failed to deliver product in due time (& warning)
 
 U4) Store Manager 
 G1) View & respond to customer complains
-G2) Overview the products recommended by the technician and supplier, based on the requirement and previous experience on product knowledge Order / Cancel goods
+G2) Overview the products recommended by the Mechanic and Engine Supplier, based on the requirement and previous experience on product knowledge Order / Cancel goods
 G3) Sending out monthly email to the registered customers if there is any upgrade available for their car model
 G4) Overview any pick-up request by the customer, verify the case & send the necessary pick-up vehicle (depending on the type of the car)
 G5) Report of any emergency leave / Apply for any leave of absence
@@ -43,13 +39,13 @@ G5) Report of any emergency leave / Apply for any leave of absence
 
 
 U5) Human Resource Manager
-G1) Add Technician & Store Manager & Supplier by inputting details
+G1) Add Customer, Mechanic, Store Manager & Engine Supplier by inputting details
 
-G2) Maintain technicians by training the warned ones 
-G3) Identify current and future customer requirements by establishing connection with registered and frequent customers to understand service requirements
+G2) Maintain Mechanics by training the warned ones 
+G3) Identify current and future customer requirements by establishing connection with registered and frequent customers to understand service requirements.
 
-G4) View any leave of absence asked by the technician & Store Manager grant the leave based on the reason. 
-G5) Warn / remove any technician if the attendance / leave of absence is high and the reasons are not strong enough
+G4) View any leave of absence asked by the Mechanic & Store Manager grant the leave based on the reason. 
+G5) Warn / remove any Mechanic if the attendance / leave of absence is high and the reasons are not strong enough
 
 
 
@@ -58,32 +54,35 @@ G5) Warn / remove any technician if the attendance / leave of absence is high an
 
 Workflow:
 U1) Customer (car owner)
-G1) Customer can see the workload of technician & make an appointment
+G1) Customer can see the workload of Mechanic & make an appointment
 	W1) Sign-up - for singing up the customer have to provide his 1) Name 2) Car model 3) Car Registration number 4) E-mail 5) Password
-	W2) log-in - 1) Car Registration number 2) Password
+	W2) log-in -  1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) From the dashboard select the option – Make appointment
 W3) If there is already appointment taken: show the date of appointment / the progress of work, if the work has been done and the vehicle is ready to be taken from workshop
 Else:
-	W4) View the workload of technician in the calendar form & if any technician is free, the customer can book for an appointment on that date
+	W4) View the workload of Mechanic in the calendar form & if any Mechanic is free, the customer can book for an appointment on that date
 
-G2) Customer can communicate with technician & ask for solution of problem / recommendation of upgrade from Technician 
+G2) Customer can communicate with Mechanic & ask for solution of problem / recommendation of upgrade from Mechanic 
 	W1) Sign-up - for singing up the customer have to provide his 1) Name 2) Car model 3) Car Registration number 4) E-mail 5) Password
-	W2) log-in - 1) Car Registration number 2) Password
-	W3) From the dashboard select the option – Communicate with a Technician
+	W2) log-in - 1) ID number (Provided by the company) 2) Password (Provided by the company)
+
+	W3) From the dashboard select the option – Communicate with a Mechanic
 	W4) if there is already a communication on going then they will be redirected to that conversation 
 	Or:
 	W5) The user will be prompted (with a pop-up) for choosing - Repair Recommendation / Upgrade Recommendation
 	W6) if the user chooses Repair Recommendation, then they will be given a page to fill up; they will be asked to describe the problem if / as best as they can
-	W7) they can view the reply of the technician and carry on the conversation 
+	W7) they can view the reply of the Mechanic and carry on the conversation 
 
 G3) Order for pick-up of vehicle (in case it is totally / partially immobilized)
-	W1) log-in - 1) Car Registration number 2) Password
+	W1) log-in - 1) ID number (Provided by the company) 2) Password (Provided by the company)
+
 	W2) From the dashboard select the option – Order for pick-up
 	W3) Share the location of the pick-up point
 	W4) Create a note regarding how the accident took place & how much damage caused
+	W5) Attach a Picture about the condition of the car
 
 	G4) Complain to Store Manager & Reply of feedback of the complain / E-mail from the HR
-	W1) log-in - 1) Car Registration number 2) Password
+	W1) log-in - 1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) From the dashboard select the option – Complain & see the feedback of complain
 	W3) Check if there is already any pending complain to be handled or any response is provided or If there is any E-mail from the HR 
 If none: 
@@ -93,21 +92,21 @@ If there is any:
 	W6) See the email and carry forward the conversation
 
 	G5) Download the invoice of any work whenever the customer wants
-	W1) log-in - 1) Car Registration number 2) Password
+	W1) log-in - 1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) From the dashboard select the option – Download invoice
 	W3) Select the date of appointment
 	W4) Check if the invoice is the correct one & download 
 
 
 
-U2) Technician 
+U2) Mechanic 
 G1) check for list of materials available in inventory & arrival date of new goods then report to Store Manager for any goods to order 
 	W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) Check if the ID is in the defaulter list. 
 If not:
 	W3) Show Dashboard – 1) List of materials available & arrival of new goods 
 	W4) Check list of materials available & Arrival of new goods
-W5) If technician does not find any required good, can report for that product to the store manager
+W5) If Mechanic does not find any required good, can report for that product to the store manager
 
 G2) Communicate with the Customer & Refer the Customer for asked recommendation
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
@@ -126,9 +125,9 @@ W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by t
 If not:
 	W3) Show Dashboard –  Attendance & Start work / End Work
 	W4) Record Attendance and provide option for Start Work / End Work
-	W5) Based on the technician selection take the attendance 
-	W6) If the technician select Start Work : Ask for Customer Name/ Car registration number and record Starting time of the work
-	W7) If the technician select End Work : Ask for Customer Name/ Car registration number and record Ending time of the work
+	W5) Based on the Mechanic selection take the attendance 
+	W6) If the Mechanic select Start Work : Ask for Customer Name/ Car registration number and record Starting time of the work
+	W7) If the Mechanic select End Work : Ask for Customer Name/ Car registration number and record Ending time of the work
 
 
 
@@ -147,17 +146,17 @@ If selected apply for Leave of absence:
 		W7) Ask for the number of days
 	W8) Ask for the reason
 
-G5) Status of Technician (if any warning received from the Store Manager or Asked to join Training by HR Dept. / Any leave of absence granted)
+G5) Status of Mechanic (if any warning received from the Store Manager or Asked to join Training by HR Dept. / Any leave of absence granted)
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) Check if the ID is in the defaulter list. 
 	W3) Show Dashboard – Status
 	
-	W4) Show any warning – If there is any warning ( from Store manager ) then the technician have the option to leave a note to explain himself
+	W4) Show any warning – If there is any warning ( from Store manager ) then the Mechanic have the option to leave a note to explain himself
 	W5) Show the warning for attending a training session by HR
-W6) Leave of absence granted or denied – If the application for leave of absence is not granted, the technician have one last chance to explain if that is necessary for him to get the leave
+W6) Leave of absence granted or denied – If the application for leave of absence is not granted, the Mechanic have one last chance to explain if that is necessary for him to get the leave
 
 	
-U3) Supplier
+U3) Engine Supplier
 	G1) Can see the ordered products and their delivery due time
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) Check if the ID is in the defaulter list. 
@@ -207,12 +206,12 @@ U4) Store Manager (for the store supervision & customer complaint)
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company) 
 	W2) Show Dashboard – Customer Complain
 	W3) View the complain
-	W4) If it is related to product fault issue: warn the supplier and ask the customer to bring the car for a replacement or if there is any fault in repairing or service: Repay the customer & warn the technician 
+	W4) If it is related to product fault issue: warn the Engine Supplier and ask the customer to bring the car for a replacement or if there is any fault in repairing or service: Repay the customer & warn the Mechanic 
 
-G2) Overview the products recommended by the technician and supplier, based on the requirement and previous experience on product knowledge Order / Cancel goods
+G2) Overview the products recommended by the Mechanic and Engine Supplier, based on the requirement and previous experience on product knowledge Order / Cancel goods
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company) 
 	W2) Show Dashboard – See recommendation & Order Product
-	W3) View the recommendation from the technician & Supplier
+	W3) View the recommendation from the Mechanic & Engine Supplier
 	W4) Check the inventory
 	W5) Order the necessary products 
 
@@ -247,27 +246,28 @@ If selected apply for Leave of absence:
 
 
 U5) HR department
-G1) Add Technician & Store Manager & Supplier by inputting details
+G1) Add Customer, Mechanic, Store Manager & Engine Supplier by inputting details
 
 
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
-	W2) Show Dashboard – Add  Employee
-	W3) Ask For employee type: 1) Technician 2) Store Manager 3) Supplier
-W3) Check if there are any technicians fired before
-If Technicians have been fired:
-W4) Show the application of the technicians that have applied for job
+	W2) Show Dashboard – Add  Employee / Customer
+	W3) if chosen Customer: Show the Customer details  who doesn’t have a ID and assign them ID & Password
+	W4) Ask For employee type: 1) Mechanic 2) Store Manager 3) Engine Supplier
+W5) Check if there are any Mechanics fired before
+If Mechanics have been fired:
+W6) Show the application of the Mechanics that have applied for job
 
-W5) Acceptance/ Rejection of application (Add technician based on this)
+W7) Acceptance/ Rejection of application (Add Mechanic based on this)
 
-If Technicians have not been fired:
-		W6) Show that there is no need for new technicians to be recruited 
+If Mechanics have not been fired:
+		W8) Show that there is no need for new Mechanics to be recruited 
 
 
-G2) Maintain technicians by training the warned ones 
+G2) Maintain Mechanics by training the warned ones 
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
-	W2) Show Dashboard – Train technicians
-	W3) Check for the technicians which are under warning by the store manager 
-W4) Select those technicians and give them necessary training schedule note
+	W2) Show Dashboard – Train Mechanics
+	W3) Check for the Mechanics which are under warning by the store manager 
+W4) Select those Mechanics and give them necessary training schedule note
 
 G3) Identify current and future customer requirements by establishing connection with registered and frequent customers to understand service requirements
 
@@ -281,20 +281,17 @@ W4) Select the customers who take frequent service
 
 	
 
-G4) View any leave of absence asked by the technician & Store Manager grant the leave based on the reason. 
+G4) View any leave of absence asked by the Mechanic & Store Manager grant the leave based on the reason. 
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
 	W2) Show Dashboard – Check Leave of Absence Application 
-	W3) Show the note of leave of absence if there is any emergency leave & the reason does not seem fair enough warn the technician 
-	W4) Check the Leave of absence request from the technician / Store Manager and based on the days, previously asked for leave of absence & reason Accept or Reduce or Reject the leave of absence
+	W3) Show the note of leave of absence if there is any emergency leave & the reason does not seem fair enough warn the Mechanic 
+	W4) Check the Leave of absence request from the Mechanic / Store Manager and based on the days, previously asked for leave of absence & reason Accept or Reduce or Reject the leave of absence
 
 
-G5) Warn / remove any technician if the attendance / leave of absence is high and the reasons are not strong enough
+G5) Warn / remove any Mechanic if the attendance / leave of absence is high and the reasons are not strong enough
 
 W1) log-in – 1) ID number (Provided by the company) 2) Password (Provided by the company)
-	W2) Show Dashboard – Warn / Remove Technician 
-	W3) See the number of warnings received by the technicians and their valid reasons if provided.
-	W4) Decide if Warning will be given or Technician will be removed
-	W5) If Technician is removed then there will be an empty slot for to add new Technician or If warned the Warning message will be noted on the technicians field
-
-	
-
+	W2) Show Dashboard – Warn / Remove Mechanic 
+	W3) See the number of warnings received by the Mechanics and their valid reasons if provided.
+	W4) Decide if Warning will be given or Mechanic will be removed
+	W5) If Mechanic is removed then there will be an empty slot for to add new Mechanic or If warned the Warning message will be noted on the Mechanics field
