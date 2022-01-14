@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automobileworkshop.SupplierDashBoardController">
+   <children>
+      <Label fx:id="SupplierID" layoutX="192.0" layoutY="44.0" minHeight="16" minWidth="69" prefHeight="48.0" prefWidth="239.0" text="id" />
+      <Label fx:id="SupplierStatusAndMessage" layoutX="193.0" layoutY="72.0" minHeight="16" minWidth="69" prefHeight="48.0" prefWidth="239.0" text="status" />
+      <Text layoutX="24.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your ID" wrappingWidth="131.9814453125" />
+      <Text layoutX="18.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Status &amp; Message:" wrappingWidth="143.0" />
+      <TableView fx:id="Inventory" layoutX="19.0" layoutY="132.0" prefHeight="200.0" prefWidth="264.0">
+         <columns>
+            <TableColumn prefWidth="69.0" text="Available" />
+            <TableColumn prefWidth="94.0" text="Engine Model" />
+            <TableColumn prefWidth="112.0" text="Arrival Date" />
+         </columns>
+      </TableView>
+      <Button layoutX="47.0" layoutY="428.0" mnemonicParsing="false" onAction="#SupplierSuggestForPurchaseButtonOnClick" prefHeight="27.0" prefWidth="174.0" text="Suggest for Purchasing" />
+      <TextField fx:id="EngineSuggestion" layoutX="54.0" layoutY="354.0" promptText="Engine Model" />
+      <TextField fx:id="QuantitySuggestion" layoutX="54.0" layoutY="394.0" promptText="Quantity" />
+      <TabPane fx:id="PendingOrders" layoutX="312.0" layoutY="28.0" prefHeight="222.0" prefWidth="431.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="DeliveryOrderPending" text="Order to be Delivered" />
+            <Tab fx:id="FailedToDeliverProducts" text="Previously Failed to Deliver" />
+         </tabs>
+      </TabPane>
+      <TextField fx:id="SupplierEngineModelDelivered" layoutX="322.0" layoutY="302.0" promptText="Engine Model Delivered" />
+      <TextField fx:id="SupplierEngineQuantityDelivered" layoutX="322.0" layoutY="337.0" promptText="Quantity" />
+      <Button layoutX="374.0" layoutY="380.0" mnemonicParsing="false" onAction="#SupplierConfirmDeliveryButtonOnClick" text="Deliver" />
+      <DatePicker fx:id="SupplierDateOfDelivery" layoutX="492.0" layoutY="260.0" onAction="#RecordProductSuppliedButtonOnClick" />
+      <Text layoutX="322.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick the date of delivery" wrappingWidth="162.0" />
+      <Button layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#GoBackButtonOnClick" text="Main Menu" />
+   </children>
+</AnchorPane>

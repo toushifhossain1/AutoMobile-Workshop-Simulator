@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automobileworkshop.AutoMobileWorkshopController">
+   <children>
+      <RadioButton fx:id="CustomerRadioButton" graphicTextGap="5.0" layoutX="98.0" layoutY="119.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseDragEntered="#handleButtonAction" text="Customer">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup1" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="MechanicRadioButton" graphicTextGap="5.0" layoutX="98.0" layoutY="157.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseDragEntered="#handleButtonAction" text="Mechanic" toggleGroup="$toggleGroup1">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="StoreManagerRadioButton" graphicTextGap="5.0" layoutX="97.0" layoutY="192.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseDragEntered="#handleButtonAction" text="Store Manager" toggleGroup="$toggleGroup1">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="EngineSupplierRadioButton" graphicTextGap="5.0" layoutX="97.0" layoutY="229.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseDragEntered="#handleButtonAction" text="Engine Supplier" toggleGroup="$toggleGroup1">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="HumanResourceManagerRadioButton" graphicTextGap="5.0" layoutX="97.0" layoutY="266.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseDragEntered="#handleButtonAction" text="Human Resource Manager" toggleGroup="$toggleGroup1">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <TextField fx:id="GetPassword" layoutX="518.0" layoutY="54.0" prefHeight="81.0" prefWidth="289.0" promptText="Please enter your password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="LogIn" layoutX="605.0" layoutY="151.0" mnemonicParsing="false" onAction="#ClickToLogIn" onMouseClicked="#handleButtonAction" prefHeight="52.0" prefWidth="116.0" text="Log-in">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="28.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="65.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select which type of user you are:" underline="true" wrappingWidth="308.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="SignUp" layoutX="526.0" layoutY="240.0" mnemonicParsing="false" onAction="#ClickToSignUp" prefHeight="64.0" prefWidth="289.0" text="Sign-up if you are a new customer">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="651.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" wrappingWidth="23.9814453125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
